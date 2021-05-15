@@ -91,8 +91,6 @@ ggplot(Child, aes(x = reorder(Children, -Count), y = Count)) + geom_bar(stat = "
 Forbes_new$Self_Status <- revalue(Forbes_new$Self_made, c(True = "Self-Made", False = "Not Self-Made"))
 View(Forbes_new)
 
-New = na.omit()
-
 #grouping Self-Made status
 Self_Made <- Forbes_new %>% group_by(Self_Status) %>% dplyr::summarise(n = n())
 
